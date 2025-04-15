@@ -1,187 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    
-    <title>Uppala Aravind Portfolio</title>
-    <meta name="description" content="Explore the portfolio of Uppala Aravind, a fresher job seeker and prompt engineer. Highlighting skills, projects, certifications, and career aspirations." />
-    <meta name="author" content="Uppala Aravind" />
-    <meta name="keywords" content="Uppala Aravind, fresher portfolio, prompt engineer, skills, certifications, projects, job seeker, MCA graduate" />
-    <meta name="robots" content="index, follow" />
-  
-    
-    <meta property="og:title" content="Uppala Aravind Portfolio - Fresher Job Seeker " />
-    <meta property="og:description" content="Discover Uppala Aravind's portfolio showcasing skills, certifications, and career highlights. A fresh talent ready for impactful opportunities." />
-    <meta property="og:image" content="path-to-your-image.jpg" />
-    <meta property="og:url" content="https://uppalaaravind28.github.io/Portfolio" />
-    <meta property="og:type" content="website" />
-  
-    
-    
-    <link rel="canonical" href="https://uppalaaravind28.github.io/Portfolio" />
-  
-    
-    <link rel="icon" href="./arav.jpg" type="image/x-icon" />
-  
-    
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  
-  <body>
-    <header>
-      <h1>Uppala Aravind</h1>
-      <p>Fresher Job Seeker </p>
-    </header>
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uppala Aravind | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Uppala Aravind</h1>
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-        
-      </ul>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <section id="about">
+  <main>
+    <section class="hero" id="about">
       <h2>About Me</h2>
       <p>
-        To join a reputed organization where I can apply my knowledge and skills
-        to solve real-world challenges, contribute to impactful projects, and
-        grow as a professional while aligning with the company’s vision and
-        goals.
+        To secure a challenging position where I can utilize my academic knowledge,
+        technical skills, and enthusiasm to contribute effectively to the growth of
+        the organisation while enhancing my professional expertise and gaining valuable
+        real-world experience.
       </p>
     </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>
-          Master of Computer Applications, Vignan’s Lara Institute of Technology
-          and Science (CGPA: 7.40/10)
-        </li>
-        <li>
-          Bachelor of Science in MPCs, Shree Velagapudi Ramakrishna Memorial
-          College (CGPA: 7.33/10)
-        </li>
-      </ul>
-    </section>
+    <hr />
 
     <section id="skills">
       <h2>Skills</h2>
-      <h3>Technical Skills</h3>
-      <ul>
-        <li>C, Java, Python</li>
-        <li>HTML, CSS, MySQL</li>
-        <li>OOPS, DBMS, Operating Systems</li>
-      </ul>
-      <h3>Soft Skills</h3>
-      <ul>
-        <li>Teamwork</li>
-        <li>Problem-Solving</li>
-        <li>Time Management</li>
-        <li>Adaptable</li>
-      </ul>
-      <h3>Version Control</h3>
-      <ul>
-        <li>Git</li>
-        <li>GitHub</li>
-      </ul>
+      <div class="grid">
+        <div class="card">C, Python</div>
+        <div class="card">HTML, CSS</div>
+        <div class="card">MySQL</div>
+        <div class="card">OOPs, DBMS, Cloud Computing</div>
+        <div class="card">Git, GitHub</div>
+        <div class="card">NumPy, Pandas, sklearn, OpenCV</div>
+        <div class="card">Teamwork, Problem-solving</div>
+      </div>
     </section>
+
+    <hr />
 
     <section id="projects">
       <h2>Projects</h2>
-      <p>
-        <strong
-          >LLM-Powered Advanced Automated Question Answering (Dec 2023 - Mar
-          2024)</strong
-        >
-      </p>
-      <ul>
-        <li>Built a system to provide accurate answers to user queries.</li>
-        <li>
-          Used Natural Language Processing and prompt engineering techniques.
-        </li>
-        <li>
-          Natural Language Processing is utilized to understand user queries.
-        </li>
-        <li>
-            Prompt engineering is employed to train the system. 
-          </li>
-      </ul>
-
-      <p>
-        <strong
-          >Hyderabadi Biriyani The restaurant website  (Nov 2024 - Dec
-          2024)</strong
-        >
-      </p>
-      <ul>
-        <li>The Hyderabadi Biriyani Website is a user-friendly and visually appealing platform designed to showcase a restaurant's 
-          menu and services.</li>
-        <li>
-          These websites were developed using HTML and CSS.
-        </li>
-        <li>
-          Git is for version control, and GitHub is for hosting repositories.
-        </li>
-        <li>
-          VS Code is used as an IDE.
-          </li>
-      </ul>
+      <div class="grid">
+        <div class="card">
+          <h3>LLM-Powered QA System</h3>
+          <p>AI system using LLM & NLP to answer user queries.</p>
+          <a href="https://github.com/UppalaAravind28/Question_Answering" target="_blank">GitHub Repo</a>
+        </div>
+        <div class="card">
+          <h3>Hand Gesture Zoom</h3>
+          <p>Real-time zoom control via hand gestures using OpenCV.</p>
+          <a href="https://github.com/UppalaAravind28/HandGestureImageZoom" target="_blank">GitHub Repo</a>
+        </div>
+        <div class="card">
+          <h3>Hyderabadi Biriyani Website</h3>
+          <p>Restaurant menu showcase website using HTML/CSS.</p>
+          <a href="https://uppalaaravind28.github.io/HyderabadiBiriyani/" target="_blank">Live Site</a>
+        </div>
+      </div>
     </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Certified in AI Fundamentals by Cisco Networking Academy in collaboration with IBM Skills Build. </li>
-          <li>
-            Earned certification in Object-oriented Programming from LinkedIn Learning. 
-          </li>
-          <li>
-            Completed a course in Python with a certificate of completion from Great Learning.
-          </li>
-          <li>
-            Completed a course in C programming with a certificate of completion from PrepInsta.  
-            </li>
-        </ul>
-      </section>
+    <hr />
+
+    <section id="certs">
+      <h2>Certifications</h2>
+      <div class="grid">
+        <div class="card">AI Fundamentals - Cisco & IBM</div>
+        <div class="card">OOP in Python - LinkedIn Learning</div>
+        <div class="card">Python - Great Learning</div>
+        <div class="card">Prompt Engineering - LinkedIn Learning</div>
+        <div class="card">C Programming - Prep Insta</div>
+      </div>
+    </section>
+
+    <hr />
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>
-        Email:
-        <a href="mailto:aravind.uppala2002@gmail.com"
-          >aravind.uppala2002@gmail.com</a
-        >
-      </p>
-      <p>
-        Phone:
-        <a href="tel: +91 9182120474"
-          >+91 9182120474</a
-        >
-      <p>
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/uppala-aravind-28-lin"
-          target="_blank"
-          >View Profile</a
-        >
-      </p>
-      <p>
-        GitHub:
-        <a href="https://github.com/UppalaAravind28" target="_blank"
-          >View Repositories</a
-        >
-      </p>
+      <div class="grid">
+        <div class="card">
+          <p>📧 <a href="mailto:uppalaaravind28@gmail.com">uppalaaravind28@gmail.com</a></p>
+          <p>🔗 <a href="https://www.linkedin.com/in/uppala-aravind-28-lin" target="_blank">LinkedIn</a></p>
+          <p>💻 <a href="https://github.com/UppalaAravind28" target="_blank">GitHub</a></p>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-      <p>&copy; 2024 Uppala Aravind. All Rights Reserved.</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2025 Uppala Aravind. All rights reserved.</p>
+  </footer>
+</body>
 </html>
