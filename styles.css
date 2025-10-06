@@ -238,17 +238,3 @@ footer {
 
 
 
-/* Ensure chatbot container stays on top */
-.kore-chat-window {
-  position: fixed !important;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10000 !important; /* highest priority */
-}
-
-/* Optionally add bottom padding to projects section */
-#projects {
-  position: relative; /* ensure stacking context */
-  padding-bottom: 150px; /* enough space for the chatbot */
-  z-index: 1; /* lower than chatbot */
-}

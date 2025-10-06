@@ -96,27 +96,8 @@
     <p>&copy; 2025 Uppala Aravind. All rights reserved.</p>
   </footer>
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      grabCursor: true,
-      slidesPerView: 1,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      }
-    });    
-  </script> -->
-  
-  <script src="https://bots.kore.ai/chatbot/v2/korechat.min.js"></script>
-
-<script  src="https://cdn.jsdelivr.net/npm/kore-web-sdk@11.16.0/dist/umd/kore-web-sdk-umd-chat.min.js"></script>
-<script>
+<!-- <script  src="https://cdn.jsdelivr.net/npm/kore-web-sdk@11.16.0/dist/umd/kore-web-sdk-umd-chat.min.js"></script> -->
+<!-- <script>
         //chat window declaration
         var chatConfig=KoreChatSDK.chatConfig;
         var chatWindow=KoreChatSDK.chatWindow;
@@ -136,10 +117,45 @@
 	Refer below document for JWT token generation at server side. Client Id and Client secret should maintained at server end.
 	https://developer.kore.ai/docs/bots/sdks/user-authorization-and-assertion/
 	**/
-        koreBotInstance.destroy();
         //show chatwindow
         chatWindowInstance.show(chatConfig);
 
+</script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/kore-web-sdk@11.16.0/dist/umd/kore-web-sdk-umd-chat.min.js"></script>
+<script>
+    // Helper function for a unique user/session ID
+    function getUniqueUserId() {
+        return 'aravindu_' + Date.now() + '_' + Math.floor(Math.random() * 1e6) + '@pronixinc.com';
+    }
+
+    function createNewChatWindow() {
+        // Clone botOptions each time for a fresh config
+        var botOptions = Object.assign({}, KoreChatSDK.chatConfig.botOptions);
+
+        // Unique userIdentity for concurrency
+        botOptions.userIdentity = getUniqueUserId();
+        botOptions.JWTUrl = "https://mk2r2rmj21.execute-api.us-east-1.amazonaws.com/dev/users/sts";
+        botOptions.botInfo = { name: "Food Ordering", "_id": "st-c0445748-d808-5b6c-a55b-207633e2e316" };
+        botOptions.clientId = "cs-13884bc5-31ca-5e8f-b200-4b381e4c97ea";
+        botOptions.clientSecret = "1h42cfxxa/ro4v8xVyXNfOqqU3MOA6TJEJjluU1jkjQ=";
+
+        // New chatConfig for each window
+        var chatConfig = Object.assign({}, KoreChatSDK.chatConfig, { botOptions });
+
+        // Create new chat window instance
+        var chatWindowInstance = new KoreChatSDK.chatWindow();
+
+        // Show chat window (can append to custom element)
+        chatWindowInstance.show(chatConfig);
+        return chatWindowInstance;
+    }
+
+    // Example: Create a new window on each page load or on button click
+    // For demo, auto-create on load:
+    createNewChatWindow();
+
+    // Alternatively, call `createNewChatWindow()` on a button click to open additional chat windows if needed.
 </script>
 
 
